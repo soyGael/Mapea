@@ -8,7 +8,6 @@ import {
   Image,
 } from "react-native";
 import MapView, { Marker } from "react-native-maps";
-import universidadIcon from "./assets/UT.png";
 
 export default function App() {
   const mapRef = useRef(null);
@@ -65,8 +64,8 @@ export default function App() {
       {
         latitude: latitude,
         longitude: longitude,
-        latitudeDelta: 0.1,
-        longitudeDelta: 0.1,
+        latitudeDelta: 0.00654,
+        longitudeDelta: 0.00654,
       },
       500
     );
