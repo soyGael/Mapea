@@ -108,10 +108,12 @@ export default function App() {
             style={styles.listItem}
             onPress={() => zoomToLocation(item.latitude, item.longitude)}
           >
-            <View style={{}}>
+            <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
               <Image source={item.image} style={styles.image} />
-              <Text style={styles.listTitle}>{item.title}</Text>
-              <Text style={styles.listText}>{item.description}</Text>
+              <View>
+                <Text style={styles.listTitle}>{item.title}</Text>
+                <Text style={styles.listText}>{item.description}</Text>
+              </View>
             </View>
           </TouchableOpacity>
         )}
@@ -140,16 +142,18 @@ const styles = StyleSheet.create({
     borderBottomColor: "#ccc",
   },
   listTitle: {
+    fontSize: 20,
     fontWeight: "bold",
   },
   listText: {
     fontSize: 16,
   },
   image: {
-    width: 150,
+    width: "100%",
     height: 100,
     margin: 0,
     padding: 0,
-    resizeMode: "contain",
+    resizeMode: "cover",
+
   },
 });
